@@ -1,5 +1,38 @@
 <!DOCTYPE html>
 
+
+
+<script>
+  // if (condition) {
+  //   fullcalendar
+  // }
+  $cache_expire = session_cache_expire();
+  if ($cache_expire>=300) {
+    $.ajax({
+        url:"<?php echo base_url(); ?>usuario/logout",
+        type:"POST",
+        
+        success:function()
+        {
+            alert("Session terminada");
+                    }
+});
+alert('hola');
+
+  }
+
+</script>
+<!-- 
+<?php
+if ($this->sess_expiration >=300)
+{
+print('hola');
+}
+?> -->
+
+
+
+
 <html lang="">
 <head>
 <title><?php echo $this->session->userdata('nombreEvento')?> </title>
@@ -9,7 +42,6 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 -->
 
-<link rel="icon" href="<?php echo base_url(); ?>adminLTE/loguin/images/foto.jpg" />
 <link rel="icon" href="<?php echo base_url ();?>adminLTE/login/images/foto.jpg">
 
   	
